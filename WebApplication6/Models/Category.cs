@@ -10,3 +10,4 @@ namespace WebApplication6.Models
         public List<Product>? Products { get; set; }
     }
 }
+                                
