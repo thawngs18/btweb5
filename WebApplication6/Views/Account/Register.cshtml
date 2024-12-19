@@ -1,0 +1,40 @@
+﻿@model WebApplication6.Models.User
+
+@{
+    ViewData["Title"] = "Đăng ký";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<div class="d-flex justify-content-center">
+    <form asp-action="Register" method="post" class="w-50">
+        <div class="form-group">
+            <label asp-for="Username">Tên đăng nhập</label>
+            <input asp-for="Username" class="form-control" placeholder="Nhập tên đăng nhập" required autofocus />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password">Mật khẩu</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Nhập mật khẩu" required />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" type="email" class="form-control" placeholder="Nhập email" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+
+        <div class="text-center mt-3">
+            <a href="#">Đã có tài khoản? Đăng nhập ngay</a>
+        </div>
+    </form>
+</div>

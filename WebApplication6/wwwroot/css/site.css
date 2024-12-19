@@ -1,31 +1,77 @@
+﻿/* Global Styles */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    background: linear-gradient(134deg, #ced7e7, #ced7e7); /* Gradient xanh tím nhẹ nhàng */
+    color: #2c2c2c; /* Text màu tối nhẹ, dễ đọc */
+    font-family: 'Courier New', Courier, monospace;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 18px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.8;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Xanh nhạt tạo sự dịu mắt */
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Button Focus Styles */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.3rem rgba(38, 198, 218, 0.8), 0 0 0 0.35rem #4fc3f7; /* Màu xanh nhẹ nhàng */
+    outline: none;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+/* Placeholder Styles for Floating Forms */
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: #6a89cc; /* Xanh biển nhẹ nhàng */
+    text-align: center;
+    font-weight: bold;
 }
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: left;
+    color: #40739e; /* Xanh đậm hơn khi focus */
+}
+
+/* Enhance Form Controls */
+.form-control {
+    border-radius: 1rem;
+    border: 2px solid #82ccdd; /* Xanh biển nhạt */
+    padding: 1rem;
+    background: linear-gradient(90deg, #ffffff, #dff9fb); /* Màu nền dịu nhẹ */
+}
+
+    .form-control:focus {
+        border-color: #38ada9; /* Xanh ngọc đậm hơn khi focus */
+        background-color: #eafaf1; /* Nền xanh nhạt */
+    }
+
+/* Buttons Styling */
+.btn {
+    background: linear-gradient(45deg, #38ada9, #0abde3); /* Gradient xanh ngọc đẹp */
+    color: #fff;
+    border: 3px solid #82ccdd; /* Xanh biển nhạt */
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .btn:hover {
+        background: linear-gradient(45deg, #0abde3, #1e3799); /* Xanh đậm hơn khi hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Bóng nhẹ hơn */
+        transform: scale(1.05); /* Tăng kích thước nhẹ */
+    }
